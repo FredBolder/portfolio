@@ -13,33 +13,66 @@
         <h1>Fred Bolder's Portfolio</h1>
       </header>
       <nav>
-        &lt;nav&gt;<br />
-        <span class="hidden">__</span>&lt;ul&gt;<br />
-        <span class="hidden">____</span>&lt;li&gt;<br />
-        <span class="hidden">______</span>&lt;a href="#about"&gt;<a href="#about"
-          >About me</a
-        >&lt;/a&gt;<br />
-        <span class="hidden">____</span>&lt;/li&gt;<br />
-        <span class="hidden">____</span>&lt;li&gt;<br />
-        <span class="hidden">______</span>&lt;a href="#computer"&gt;<a
-          href="#computer"
-          >Computer<span class="proficiency"> Proficiency</span></a
-        >&lt;/a&gt;<br />
-        <span class="hidden">____</span>&lt;/li&gt;<br />
-        <span class="hidden">____</span>&lt;li&gt;<br />
-        <span class="hidden">______</span>&lt;a href="#languages"&gt;<a
-          href="#languages"
-          >Languages</a
-        >&lt;/a&gt;<br />
-        <span class="hidden">____</span>&lt;/li&gt;<br />
-        <span class="hidden">____</span>&lt;li&gt;<br />
-        <span class="hidden">______</span>&lt;a href="#projects"&gt;<a
-          href="#projects"
-          >Projects</a
-        >&lt;/a&gt;<br />
-        <span class="hidden">____</span>&lt;/li&gt;<br />
-        <span class="hidden">__</span>&lt;/ul&gt;<br />
-        &lt;/nav&gt;
+        <div class="small">
+          &lt;nav&gt;<br />
+          <span class="hidden">__</span>&lt;ul&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#about"&gt;<br />
+          <span class="hidden">________</span><a href="#about">About me</a
+          ><br />
+          <span class="hidden">______</span>&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#computer"&gt;<br />
+          <span class="hidden">________</span><a href="#computer">Computer</a
+          ><br />
+          <span class="hidden">______</span>&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#languages"&gt;<br />
+          <span class="hidden">________</span><a href="#languages">Languages</a
+          ><br />
+          <span class="hidden">______</span>&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#projects"&gt;<br />
+          <span class="hidden">________</span><a href="#projects">Projects</a
+          ><br />
+          <span class="hidden">______</span>&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">__</span>&lt;/ul&gt;<br />
+          &lt;/nav&gt;
+        </div>
+        <div class="not_small">
+          &lt;nav&gt;<br />
+          <span class="hidden">__</span>&lt;ul&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#about"&gt;<a
+            href="#about"
+            >About me</a
+          >&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#computer"&gt;<a
+            href="#computer"
+            >Computer<span class="proficiency"> Proficiency</span></a
+          >&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#languages"&gt;<a
+            href="#languages"
+            >Languages</a
+          >&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">____</span>&lt;li&gt;<br />
+          <span class="hidden">______</span>&lt;a href="#projects"&gt;<a
+            href="#projects"
+            >Projects</a
+          >&lt;/a&gt;<br />
+          <span class="hidden">____</span>&lt;/li&gt;<br />
+          <span class="hidden">__</span>&lt;/ul&gt;<br />
+          &lt;/nav&gt;
+        </div>
       </nav>
 
       <section id="about" class="about">
@@ -60,9 +93,9 @@
               instruments (piano, drums, recorder and more), singing (nowadays
               mostly Greek) and dancing (Ballroom, Latin and Greek dances).
               Related to my hobbies, I have written a lot of
-              <a href="#e-books">e-books.</a> Writing these books and the manuals 
-              for the software, gave me a lot of experience in writing explanations
-              in English. 
+              <a href="#e-books">e-books.</a> Writing these books and the
+              manuals for the software, gave me a lot of experience in writing
+              explanations in English.
             </p>
             <p>
               Feel free to contact me by
@@ -159,14 +192,16 @@
             private void timerProjects_Tick(object: sender, System.EventArgs
             e)<br />
             {<br />
-            <span class="hidden">__</span>ShowScreenshot(currentScreenshot);<br />
+            <span class="hidden">__</span
+            >ShowScreenshot(currentScreenshot);<br />
           </div>
           <div class="project_pictures">
             <div></div>
           </div>
           <div class="section_code">
             <span class="hidden">__</span>currentScreenshot++;<br />
-            <span class="hidden">__</span>if (currentScreenshot > screenShots.Count)<br />
+            <span class="hidden">__</span>if (currentScreenshot >
+            screenShots.Count)<br />
             <span class="hidden">__</span>{<br />
             <span class="hidden">____</span>currentScreenshot = 1;<br />
             <span class="hidden">__</span>}<br />
