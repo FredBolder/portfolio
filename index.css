@@ -310,11 +310,15 @@ h3 {
   .small {
     visibility: hidden;
     position: absolute;
-    animation-name: unset;
   }
   .not_small {
     visibility: visible;
     position: unset;
+  }
+  .cursor_small {
+    animation-name: unset;
+  }
+  .cursor {
     animation-name: blink_cursor;
   }
 }
@@ -324,11 +328,15 @@ h3 {
   .small {
     visibility: visible;
     position: unset;
-    animation-name: blink_cursor;
   }
   .not_small {
     visibility: hidden;
     position: absolute;
+  }
+  .cursor_small {
+    animation-name: blink_cursor;
+  }
+  .cursor {
     animation-name: unset;
   }
 }
@@ -408,13 +416,13 @@ td {
 
 @keyframes blink_cursor {
   0% {
-    visibility: hidden;
-  }
-  50% {
     visibility: visible;
   }
-  100% {
+  50% {
     visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }
 
