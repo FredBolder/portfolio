@@ -5,8 +5,15 @@
 }
 
 :root {
-  --nav-bg-color: black;
+  --nav-bg-color-1: black;
+  --nav-bg-color-2: white;
+  --nav-color-1: rgba(170, 170, 170);
+  --nav-color-2: rgba(120, 120, 120);
+  --nav-link-color-1: white;
+  --nav-link-color-2: black;
+  --nav-animation-duration: 10000ms;
   --section-bg-color: #000050;
+  animation-name: nav_auto_coding;
 }
 
 body {
@@ -34,10 +41,122 @@ h1 {
 }
 
 nav {
-  background-color: var(--nav-bg-color);
-  color: rgba(170, 170, 170);
+  background-color: var(--nav-bg-color-1);
+  color: var(--nav-color-1);
   font-family: "Courier New", Courier, monospace;
   font-size: 0.8rem;
+  animation-name: nav_auto_coding_colors;
+  animation-duration: var(--nav-animation-duration);
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: 1px solid black;
+}
+
+.nav_animation::after {
+  animation-name: nav_auto_coding;
+  animation-duration: var(--nav-animation-duration);
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  content: "";
+}
+
+nav a {
+  animation-name: nav_auto_coding_links;
+  animation-duration: var(--nav-animation-duration);
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: var(--nav-link-color-1);
+}
+
+@keyframes nav_auto_coding {
+  0% {
+    content: "";
+  }
+  25% {
+    content: "";
+  }
+  30% {
+    content: " ";
+  }
+  32% {
+    content: " c";
+  }
+  34% {
+    content: " cl";
+  }
+  36% {
+    content: " cla";
+  }
+  38% {
+    content: " clas";
+  }
+  40% {
+    content: " class";
+  }
+  43% {
+    content: " class=";
+  }
+  46% {
+    content: ' class="';
+  }
+  48% {
+    content: ' class="l';
+  }
+  50% {
+    content: ' class="li';
+  }
+  52% {
+    content: ' class="lig';
+  }
+  54% {
+    content: ' class="ligh';
+  }
+  56% {
+    content: ' class="light';
+  }
+  60% {
+    content: ' class="light"';
+  }
+  100% {
+    content: ' class="light"';
+  }
+}
+
+@keyframes nav_auto_coding_colors {
+  0% {
+    background-color: var(--nav-bg-color-1);
+    color: var(--nav-color-1);
+  }
+  56% {
+    background-color: var(--nav-bg-color-1);
+    color: var(--nav-color-1);
+  }
+  60% {
+    background-color: var(--nav-bg-color-2);
+    color: var(--nav-color-2);
+  }
+  100% {
+    background-color: var(--nav-bg-color-2);
+    color: var(--nav-color-2);
+  }
+}
+
+@keyframes nav_auto_coding_links {
+  0% {
+    color: var(--nav-link-color-1);
+  }
+  56% {
+    color: var(--nav-link-color-1);
+  }
+  60% {
+    color: var(--nav-link-color-2);
+  }
+  100% {
+    color: var(--nav-link-color-2);
+  }
 }
 
 nav,
@@ -175,7 +294,7 @@ h3 {
 /* Formatting fake source code depends on screen size */
 
 .small {
-  visibility: hidden;
+  visibility: hidden; 
   position: absolute;
 }
 
@@ -264,3 +383,25 @@ td {
     background-image: url("./images/bal_01.gif");
   }
 }
+
+.cursor {
+  position: absolute;
+  transform: translate(-0.25rem, 0px);
+  animation-name: blink_cursor;
+  animation-duration: 1000ms;
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink_cursor {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
