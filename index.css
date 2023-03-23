@@ -296,11 +296,13 @@ h3 {
 .small {
   visibility: hidden; 
   position: absolute;
+  animation-name: unset;
 }
 
 .not_small {
   visibility: hidden;
   position: absolute;
+  animation-name: unset;
 }
 
 @media (min-width: 500px) {
@@ -308,10 +310,12 @@ h3 {
   .small {
     visibility: hidden;
     position: absolute;
+    animation-name: unset;
   }
   .not_small {
     visibility: visible;
     position: unset;
+    animation-name: blink_cursor;
   }
 }
 
@@ -320,10 +324,12 @@ h3 {
   .small {
     visibility: visible;
     position: unset;
+    animation-name: blink_cursor;
   }
   .not_small {
     visibility: hidden;
     position: absolute;
+    animation-name: unset;
   }
 }
 
@@ -387,7 +393,14 @@ td {
 .cursor {
   position: absolute;
   transform: translate(-0.25rem, 0px);
-  animation-name: blink_cursor;
+  animation-duration: 1000ms;
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+}
+
+.cursor_small {
+  position: absolute;
+  transform: translate(-0.25rem, 0px);
   animation-duration: 1000ms;
   animation-timing-function: step-start;
   animation-iteration-count: infinite;
@@ -395,13 +408,13 @@ td {
 
 @keyframes blink_cursor {
   0% {
-    visibility: visible;
-  }
-  50% {
     visibility: hidden;
   }
-  100% {
+  50% {
     visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 
