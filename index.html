@@ -120,12 +120,11 @@
         </div>
         <div class="section_content">
           <h2>Computer Proficiency</h2>
-          <!--
           <div class="start_stop_table_animation">
-            <div class="start_table_animation">Start</div>
-            <div class="stop_table_animation">Stop</div>
+            <div>Animation</div>
+            <div id="btStart" class="start_table_animation">Start</div>
+            <div id="btStop" class="stop_table_animation">Stop</div>
           </div>
-          -->
           <div class="section_code">
             &lt;table class="border-<span class="table_animation"></span
             ><span class="cursor_table">|</span>"&gt;
@@ -292,5 +291,24 @@
         <div class="section_footer">&lt;/section&gt;</div>
       </section>
     </div>
+
+    <script type="text/javascript">
+      var r = document.querySelector(":root");
+      const btStart = document.getElementById("btStart");
+      const btStop = document.getElementById("btStop");
+
+      btStart.addEventListener("click", function () {
+        r.style.setProperty("--table-coding-name", "table_auto_coding");
+        r.style.setProperty(
+          "--table-coding-border-name",
+          "table_auto_coding_border"
+        );
+      });
+
+      btStop.addEventListener("click", function () {
+        r.style.setProperty("--table-coding-name", "unset");
+        r.style.setProperty("--table-coding-border-name", "unset");
+      });
+    </script>
   </body>
 </html>

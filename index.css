@@ -13,8 +13,12 @@
   --nav-link-color-2: black;
   --nav-animation-duration: 10000ms;
   --section-bg-color: #000050;
+  /*
   --table-coding-name: table_auto_coding;
   --table-coding-border-name: table_auto_coding_border;
+  */
+  --table-coding-name: unset;
+  --table-coding-border-name: unset;
   animation-name: nav_auto_coding;
 }
 
@@ -496,10 +500,10 @@ td {
   animation-name: blink_cursor;
 }
 
-/*
 .start_stop_table_animation {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -511,22 +515,13 @@ td {
   border-radius: 5px;
 }
 
-.start_table_animation:active root {
-  --table-coding-name: table_auto_coding;
-  --table-coding-border-name: table_auto_coding_border;
-}
-
-.stop_table_animation:active root {
-  --table-coding-name: unset;
-  --table-coding-border-name: unset;
-}
-
 .start_table_animation:active,
 .stop_table_animation:active {
   background-color: yellow;
   color: black;
 }
 
+/*
 @media (min-width: 900px) {
   :root {
     --table-coding-name: unset;
