@@ -306,11 +306,16 @@
           "--table-coding-border-name",
           "table_auto_coding_border"
         );
+        r.style.setProperty(
+          "--table-coding-zebra-name",
+          "table_auto_coding_zebra"
+        );
       });
 
       btStop.addEventListener("click", function () {
         r.style.setProperty("--table-coding-name", "unset");
         r.style.setProperty("--table-coding-border-name", "unset");
+        r.style.setProperty("--table-coding-zebra-name", "unset");
       });
     </script>
   </body>

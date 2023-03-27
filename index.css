@@ -12,14 +12,16 @@
   --nav-link-color-1: white;
   --nav-link-color-2: black;
   --nav-animation-duration: 10000ms;
+  --table-animation-duration: 15000ms;
   --section-bg-color: #000050;
   /*
   --table-coding-name: table_auto_coding;
   --table-coding-border-name: table_auto_coding_border;
+  --table-coding-zebra-name: table_auto_coding_zebra;
   */
   --table-coding-name: unset;
   --table-coding-border-name: unset;
-  animation-name: nav_auto_coding;
+  --table-coding-zebra-name: unset;
 }
 
 body {
@@ -434,9 +436,10 @@ td {
 
 .table_animation::after {
   content: "1";
-  animation-duration: 10000ms;
+  animation-duration: var(--table-animation-duration);
   animation-timing-function: step-start;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
   animation-name: var(--table-coding-name);
 }
 
@@ -444,50 +447,106 @@ td {
   0% {
     content: "1";
   }
-  35% {
+  20% {
     content: "1";
   }
-  40% {
+  25% {
     content: "";
+  }
+  30% {
+    content: "5";
+  }
+  45% {
+    content: "5";
   }
   50% {
-    content: "5";
-  }
-  85% {
-    content: "5";
-  }
-  90% {
     content: "";
+  }
+  55% {
+    content: "1";
+  }
+  60% {
+    content: "1 ";
+  }
+  62% {
+    content: "1 z";
+  }
+  64% {
+    content: "1 ze";
+  }
+  66% {
+    content: "1 zeb";
+  }
+  68% {
+    content: "1 zebr";
+  }
+  70% {
+    content: "1 zebra";
+  }
+  100% {
+    content: "1 zebra";
   }
 }
 
 .computer th,
 .computer td {
   border-width: 1px;
-  animation-duration: 10000ms;
+  animation-duration: var(--table-animation-duration);
   animation-timing-function: step-start;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
   animation-name: var(--table-coding-border-name);
+}
+
+.computer tr {
+  background-color: unset;
+}
+
+.computer tr:nth-child(even) {
+  background-color: unset;
+  animation-duration: var(--table-animation-duration);
+  animation-timing-function: step-start;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: var(--table-coding-zebra-name);
 }
 
 @keyframes table_auto_coding_border {
   0% {
     border-width: 1px;
   }
-  35% {
+  25% {
     border-width: 1px;
   }
-  40% {
-    border-width: 1px;
+  30% {
+    border-width: 5px;
+  }
+  45% {
+    border-width: 5px;
   }
   50% {
-    border-width: 5px;
-  }
-  85% {
-    border-width: 5px;
-  }
-  90% {
     border-width: 1px;
+  }
+  100% {
+    border-width: 1px;
+  }
+}
+
+@keyframes table_auto_coding_zebra {
+  0% {
+    background-color: unset;
+  }
+  68% {
+    content: "1 zebr";
+    background-color: unset;
+  }
+  70% {
+    content: "1 zebra";
+    background-color: rgb(50, 74, 153);
+  }
+  100% {
+    content: "1 zebra";
+    background-color: rgb(50, 74, 153);
   }
 }
 
@@ -526,6 +585,7 @@ td {
   :root {
     --table-coding-name: unset;
     --table-coding-border-name: unset;
+    --table-coding-zebra-name: unset;
   }
   .start_table_animation,
   .stop_table_animation {
