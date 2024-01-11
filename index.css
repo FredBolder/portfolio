@@ -194,6 +194,15 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+.linkWithGitHub {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.linkWithGitHub a:nth-child(2) {
+  color: cornflowerblue;
+}
+
 p {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
