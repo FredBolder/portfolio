@@ -188,6 +188,17 @@ a:hover {
   text-decoration: underline;
 }
 
+.programming_books {
+  display: flex;
+}
+
+.programming_books a {
+  font-size: 1em;
+  display: inline;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
 .external_links a {
   font-size: 1em;
   display: block;
